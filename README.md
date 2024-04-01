@@ -14,7 +14,7 @@ _Note: Due to grading deadline constraints, there are absolutely no late days al
 ## To-Do List
 
 ### Week 1 (April 3rd - April 9th)
-- [x] Finalize and submit the project proposal
+- [ ] Finalize and submit the project proposal
 - [ ] Start initial research and planning
 
 ### Week 2 (April 10th - April 16th)
