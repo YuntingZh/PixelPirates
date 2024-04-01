@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p, li {
+    color: #666;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Additional styling for schedule */
+.schedule {
+    background-color: #e6e6e6;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.schedule h3 {
+    color: #333;
+    font-size: 18px;
+}
+
+.schedule ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
