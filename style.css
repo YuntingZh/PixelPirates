@@ -42,3 +42,13 @@ ul {
     padding-left: 20px;
     list-style-type: disc;
 }
+.feedback-and-response {
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.feedback-and-response-header {
+    color: #0277bd;
+    font-weight: bold;
+}
