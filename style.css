@@ -52,3 +52,47 @@ ul {
     color: #0277bd;
     font-weight: bold;
 }
+
+.Contributions ul {
+    list-style-type: none; /* Removes the default list style */
+}
+
+.Contributions li {
+    padding: 8px; /* Adds some padding around each list item for better readability */
+}
+.image-row {
+    display: flex;
+    justify-content: center; /* Centers the images horizontally */
+    gap: 5px; /* Adds space between the images */
+}
+
+.resources {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+    text-align: center;
+    color: navy;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+a {
+    color: teal;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
