@@ -96,3 +96,8 @@ a {
 a:hover {
     text-decoration: underline;
 }
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
