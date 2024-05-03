@@ -371,11 +371,43 @@
                 see what you build for your final demo!
             </p>
         </div>
-
+        <div>
+            <img src="Images/mindmap.png" alt="Mind Map" style="width:100%;max-width:1200px;height:auto;">
+            <figcaption>Mind Map of Ocean Simulation</figcaption>
+        </div>
+        <div>
+            <h2>Techniques Explanation</h2>
+            <p>
+                <strong>Wave Simulation:</strong> We use FFT-based method to simulate waves by generating (angular) frequencies and
+                amplitudes and transforming these parameters into discrete point values with Inverse Fast Fourier Transform. To simulate
+                the height space (2D space), we need to apply Row Pass and Column Pass (IFFT applied to rows and columns) for 2D Inverse
+                FFT. Then, we can use bilinear interpolation to get the continuous point values in 2D height space. At last, we add
+                a displacement shader upon the height field to simulate the sharp crease of waves. 
+            </p>
+            <p>
+                <strong>Buoyancy:</strong> We try to compute the buoyancy (forces) by sampling. We take 12 samples from points beneath 
+                the boat model and use the normal vector of the wave as the force direction at the sample points. The normal vectors 
+                can be found in displacement shader after Inverse Fast Fourier Transform. 
+            </p>
+            <p>
+                <strong>Collision:</strong> Ocean surface (waves) simulated by plane meshes (as we talked above) often meet such 
+                "Water-in-Boat" problem: EITHER the wave plane cut into the model with concave surface (looks like water has come 
+                into the boat) OR the model must be completely upon the wave surface. To solve this problem, we can simulate the actual
+                collision of the fluid with particle models (e.g. FLIP model). But it is inefficient since too many particles are 
+                created for the large amount of cells in the 3D space since ocean often has large surface area and significant depth. 
+                Our solution is to simulate the ocean around the collision objects with FLIP model and try to blend the result with 
+                the ocean surface simulated by FFT-based wave model. One is inefficient but more accurate, the other is efficient 
+                but inaccurate. So, a trade-off between these two models is good deal in ocean simulation. 
+            </p>
+            <p>
+                <strong>Animation and Camera:</strong> Animation can be simulated by setting control points (6 dimensional information, 
+                including the 3D position and direction), and then deriving the curve by spline interpolation (e.g. Bezier curves from 
+                de Casteljau Algorithm). 
+            </p>
+        </div>
         <div>
             <h2>Problems Encountered in Implementation</h2>
             <p>
-
                 We initially chose to simulate a realistic ocean within Unreal Engine because we knew that it could
                 produce very realistic and visually appealing ocean effects. However, our team underestimated the time
                 required for this project. We spent a significant amount of time understanding how Unreal Engine
